@@ -2,14 +2,8 @@ name: App Builder
 
 on:
   push:
-    branches: [ master, main ]
-    paths-ignore:
-      - '**.md'
-      - '**.yml'
-  pull_request:
-    branches: [ master, main ]
-    paths-ignore:
-      - '**.md'
+    branches:
+      - 'master'
 
 jobs:
   build:
