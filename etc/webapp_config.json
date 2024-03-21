@@ -22,7 +22,8 @@
         "pass": "homer_password",
         "name": "homer_config",
         "keepalive": true,
-        "host": "localhost"
+        "host": "localhost",
+        "port": "homer_port"
     },
     "influxdb_config": {
         "enable": true,
