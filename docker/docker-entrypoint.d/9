@@ -2,6 +2,7 @@
 
 DB_HOST=${DB_HOST:-db}
 DB_PORT=${DB_PORT:-5432}
+DB_NAME=${DB_NAME:-postgres}
 DB_USER=${DB_USER:-root}
 DB_PASS=${DB_PASS:-homerSeven}
 
@@ -15,8 +16,8 @@ if [ -f /usr/local/homer/etc/webapp_config.json ]; then
 #/homer-app -create-homer-role -database-root-user=$DB_USER -database-host=localhost -database-root-password=postgres -database-homer-data=homer_data -database-homer-config=homer_config
 
 ###Create DB
-/homer-app -create-config-db -database-root-user=$DB_USER -database-host=$DB_HOST -database-root-password=$DB_PASS -database-homer-user=$DB_USER -database-port=$DB_PORT
-/homer-app -create-data-db -database-root-user=$DB_USER -database-host=$DB_HOST -database-root-password=$DB_PASS -database-homer-user=$DB_USER -database-port=$DB_PORT
+/homer-app -create-config-db -database-root-user=$DB_USER -database-host=$DB_HOST -database-root-password=$DB_PASS -database-homer-user=$DB_USER -database-port=$DB_PORT -database-root-db=$DB_NAME
+/homer-app -create-data-db -database-root-user=$DB_USER -database-host=$DB_HOST -database-root-password=$DB_PASS -database-homer-user=$DB_USER -database-port=$DB_PORT -database-root-db=$DB_NAME
 
 #Save it or edit the webapp_config.json manualy
 #/homer-app -save-homer-db-config-settings -database-host=localhost -database-homer-config=homer_config -database-homer-user=homer_user -database-homer-password=homer_password
