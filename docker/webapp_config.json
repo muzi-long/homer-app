@@ -5,7 +5,8 @@
       "user": "homer_user",
       "pass": "homer_password",
       "name": "homer_data",
-      "host": "homer_db_host"
+      "host": "homer_db_host",
+      "port": "homer_db_port"
     }
   },
   "database_config": {
